@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Free Responsive Html5 Templates">
+    <meta name="author" content="">
+
+    <title>👌 查询</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../fonts/stylesheet.css">
+    <link href="css/mb-comingsoon-iceberg.css" rel="stylesheet" />
+
+    <!-- Custom Fonts -->
+    <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- jQuery and Modernizr-->
+    <script src="../../js/jquery-2.1.1.js"></script>
+    <script src="js/modernizr.custom.97074.js"></script>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="../../js/html5shiv.js"></script>
+    <script src="../../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="sub-page">
+
+
+    <header class="sub-header">
+        <!-- /////////////////////////////////////////Navigation -->
+        <%@include file="commom/head.jsp"%>
+        <!-- Navigation -->
+
+        <div class="crumbs">
+            <div class="container">
+                <h2><a href="archive.jsp">信息</a></h2>
+                <ul>
+                    <li><a href="WEB-INF/jsp/index.jsp">主页</a></li>
+                    <li><a href="archive.jsp">信息</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Header -->
+
+
+
+
+    <div id="page-content" style="text-align: center;margin-left: 400px;margin-right: auto">
+        <div class="container">
+            <div class="row">
+                <div id="main-content">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="box-entry">
+        <c:forEach items="${employees}" var="emp">
+                                <div class="box-entry-inner">
+                                    <img src="../../../images/adult-artisan-flame-872732.jpg" class="img-responsive"  />
+                                    <div class="entry-details">
+                                        <div class="entry-des"  class="table table-bordered table-hover" id="emp_table">
+
+                                            <h3><a href="single.jsp" style="color: #c0a16b">${emp.empName}</a></h3>
+                                            <strong>${emp.department.deptLeader}</strong>
+                                            <br>
+                                            <em style="color: #aaaaaa">${emp.department.deptName}</em>
+                                            <br/>
+                                            <strong>${emp.empEmail}</strong>
+                                            <br/>
+
+
+                                            <a href="single.jsp" class="btn btn-skin" >如需帮助，请邮箱联系</a>
+
+
+
+                                        </div>
+                                    </div>
+                                </div> </c:forEach>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="wrap-footer">
+            <div class="container">
+                <div class="row">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                    <div class="copyright">
+                        <p>Copyright 2020 - 版权所有 <a href="https://space.bilibili.com/249546266" target="_blank" title="l"> Karlitch </a> - Create by <a href="https://space.bilibili.com/249546266" title="l" target="_blank"> Lele </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core JavaScript Files -->
+
+
+
+
+</body>
+<script src="../../js/bootstrap.min.js"></script>
+</html>
